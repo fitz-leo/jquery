@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.js"></script>
+    <style>
+        .cls{
+            background-color: black;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                //判断是否运用了类样式，是移出，否添加
+                /*if ($("body").hasClass("cls")){
+                    $("body").removeClass("cls");
+                } else {
+                    $("body").addClass("cls");
+                }*/
+                $("body").toggleClass("cls");
+            });
+        });
+
+    </script>
+</head>
+<body>
+<input type="button" value="开/关" id="btn"/>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 400px;
+            height: 500px;
+            background-color: red;
+        }
+    </style>
+    <script src="../jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                if ($("#p1").length==0) {
+                    $("<p id='p1'>这是一个p</p>").appendTo("#dv");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="创建一个p" id="btn">
+<div id="dv"></div>
+</body>
+</html>

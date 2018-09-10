@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.js"></script>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+<div id="dv"></div>
+<script>
+    //页面加载事件
+    $(function () {
+        $("#btn").click(function () {
+            //设置div样式
+            //第一种方式
+            /*$("#dv").css("width", "300px");
+            $("#dv").css("height", "200px");
+            $("#dv").css("backgroundColor", "hotpink");
+            $("#dv").css("border", "2px solid red");*/
+
+            //第二种：链式编程
+            /*$("#dv").css("width","300px").css("height","200px").css("backgroundColor","hotpink").css
+            ("border", "2px solid red");*/
+
+            //第三种：键值对写法
+            var json={"width":"200px","height":"100px","backgroundColor":"pink","border":"2px solid green"};
+            $("#dv").css(json);
+        });
+    });
+</script>
+</body>
+</html>

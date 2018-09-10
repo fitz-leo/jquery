@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            border: 2px solid red;
+        }
+    </style>
+    <script src="../jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                //$("#dv").html("");//第一种
+                // $("#dv").empty();//第二种
+                $("#dv").remove();//自杀型
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="移除元素" id="btn"/>
+<div id="dv">
+    <p>这是一个p</p>
+    <span>这是一个span</span>
+</div>
+</body>
+</html>

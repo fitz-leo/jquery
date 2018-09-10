@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.js"></script>
+    <style>
+        ul{
+            list-style-type: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#three").click(function () {
+                //获取li的下一个兄弟元素
+                // $(this).next("li").css("backgroundColor","red");
+                //获取某个li的前一个兄弟元素
+                // $(this).prev("li").css("backgroundColor","green");
+                // $(this).nextAll("li").css("backgroundColor","red");
+                // $(this).prevAll("li").css("backgroundColor","blue");
+                $(this).siblings("li").css("backgroundColor","gray");
+            });
+
+        });
+    </script>
+</head>
+<body>
+<ul id="uu">
+<li>凤姐</li>
+<li>芙蓉姐姐</li>
+<li id="three">犀利哥</li>
+<li>大力哥</li>
+<li>小月月</li>
+<li>小胖</li>
+<li>小明</li>
+<li>小红</li>
+</ul>
+</body>
+</html>

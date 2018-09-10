@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.js"></script>
+</head>
+<body>
+请输入中文名字：<input type="text" value="" id="txt"/><br/>
+<input type="button" value="验证" id="btn">
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            var reg=/^[\u4e00-\u9fa5]{2,6}$/;
+            var flag=reg.test($("#txt").val());
+            if (flag) {
+                $("#txt").css("backgroundColor", "green");
+            } else {
+                $("#txt").css("backgroundColor", "red");
+            }
+        });
+    });
+</script>
+</body>
+</html>

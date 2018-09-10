@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            //为按钮绑定多个相同事件
+            /*$("#btn").click(function () {
+                console.log("hahha");
+            }).click(function () {
+                console.log("123");
+            }).click(function () {
+                console.log("hehhe");
+            });*/
+
+            //第二方式
+           /* $("#btn").bind("click",function () {
+                console.log("hahah");
+            }).bind("click",function () {
+                console.log(456);
+            });*/
+
+           //第三种方式
+            $("#btn").bind({"click":function () {
+                    console.log("123");
+                },"click":function () {
+                    console.log("456");
+                }});
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+</body>
+</html>

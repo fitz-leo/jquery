@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.js"></script>
+    <script>
+    //第一种
+    $(window).load(function () {
+        console.log("hahha,123");
+    });
+    $(window).load(function () {
+        console.log("lalala.123");
+    });
+
+    //第二种方法
+    $(document).ready(function () {
+        console.log("1");
+    });
+    $(document).ready(function () {
+        console.log("2");
+    });
+
+
+    //第三种方法
+    $(function () {
+        console.log("load,1");
+    });
+    $(function () {
+        console.log("load,2");
+    });
+
+    //上边这种方法就是下边的这种的简写
+
+    jQuery(function () {
+        console.log("hah,1");
+    });
+    jQuery(function () {
+        console.log("hah,2");
+    })
+</script>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn">
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.js"></script>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+<div class="dv"></div>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            $(".dv").css("width","300px");
+            $(".dv").css("height","200px");
+            $(".dv").css("backgroundColor","pink");
+            $(".dv").css("border","2px solid green");
+        });
+    });
+</script>
+</body>
+</html>

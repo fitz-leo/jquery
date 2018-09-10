@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.js"></script>
+</head>
+<body>
+<input type="button" value="关灯" id="btn">
+<script>
+    $("#btn").click(function () {
+        if ($(this).val() === "关灯") {
+            $("body").css("backgroundColor", "black");
+            $(this).val("开灯");
+        } else {
+            $("body").css("backgroundColor", "");
+            $(this).val("关灯");
+        }
+    });
+
+    //另外一种写法
+    /*$("#btn").click(function () {
+        //判断body标签是否应用了cls的类样式
+        if ($("body").hasClass("cls")) {
+            //此处应用了cls类样式,那么就移除这个类样式
+            $("body").removeClass("cls");
+        } else {
+            //此处没有应用类样式cls,那么就添加类样式
+            $("body").addClass("cls");
+        }
+    });*/
+</script>
+</body>
+</html>

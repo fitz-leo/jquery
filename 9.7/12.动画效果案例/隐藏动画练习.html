@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+
+            width: 100px;
+            height: 80px;
+            margin: 2px;
+            float: left;
+        }
+
+        img {
+            width: 100px;
+            height: 80px;
+        }
+    </style>
+    <script src="jquery-1.12.2.js"></script>
+    <script>
+        $(function () {
+            $("div").click(function () {
+                $(this).hide(300);
+            });
+        });
+        $(function () {
+            $("#im").animate({
+                "width": "300px",
+                "height": "300px",
+                "left": "100px",
+                "top": "100px"
+            }, 3000).animate({
+                "width": "30px",
+                "height": "30px",
+                "left": "10px",
+                "top": "600px"
+            }, 300).animate({
+                "width": "50px",
+                "height": "50px",
+                "left": "800px",
+                "top": "20px"
+                , "opacity": 0.5
+            }, 2000);
+        });
+    </script>
+</head>
+<body>
+<!--<div><img src="imagess/01.jpg"></div>
+<div><img src="imagess/02.jpg"></div>
+<div><img src="imagess/03.jpg"></div>
+<div><img src="imagess/04.jpg"></div>
+<div><img src="imagess/05.jpg"></div>
+<br>-->
+
+<img src="imagess/bird.png" alt="" id="im"/>
+</body>
+</html>

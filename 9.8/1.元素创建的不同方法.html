@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            border:1px solid red;
+        }
+    </style>
+    <script src="../jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            //点击按钮，创建一个按钮
+            $("#btn").click(function () {
+                // $("<input type='button' value='按钮'>").appendTo($("#dv"));
+                //第二种方式
+                //$("#dv").html("<input type='button' value='按钮'>");
+                //把创建的span标签这个子元素直接插入到div中第一个子元素前边
+                //$("#dv").prepend($("<span>this is span</span>"));
+                //主动地方式
+                // $("<span>this is span</span>").prependTo($("#dv"));
+
+                //把元素添加到div的后边的位置，是div的下一个兄弟元素
+                $("#dv").after($("<span>this is span</span>"));
+                //把元素添加到div的前面的位置，是div的上一个兄弟元素
+                $("#dv").before($("<span>this is after span</span>"));
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="创建一个按钮" id="btn"/>
+<div id="dv">
+    <p>123</p>
+    <p>456</p>
+</div>
+<p>hahaha</p>
+</body>
+</html>

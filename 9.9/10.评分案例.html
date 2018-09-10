@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五角星评分案例</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .comment {
+            font-size: 40px;
+            color: yellow;
+        }
+
+        .comment li {
+            float: left;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+    <script src="../jquery-3.3.1.js"></script>
+    <script>
+
+        $(function () {
+            //获取所有的li标签
+            $(".comment>li").mouseenter(function () {//进入
+                //当前的li是实心的五角星,前面的li也都是实心的五角星,鼠标后面的li是空心的五角星
+                $(this).text("★").prevAll("li").end().nextAll("li").text("☆");
+                //做一个记录
+                //点哪个li就为这个li添加一个自定义属性,作为标识,但是其他的li中的这个自定义属性要删除
+                $(this).attr("index", "1").siblings("li").removeAttr("index");
+            }).mouseleave(function () {
+                //鼠标离开的时候,获取那个带有index自定义属性的li,然后,改变这个li中的五角星,
+                // 同时前面的五角星也都是实心的,同时后面的五角星都是空心
+                //先干掉所有的li中的实心的五角星
+                $(".comment>li").text("☆");
+                $(".comment>li[index=1]").text("★").prevAll("li").text("★");
+
+
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+<ul class="comment">
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+</ul>
+</body>
+
+</html>

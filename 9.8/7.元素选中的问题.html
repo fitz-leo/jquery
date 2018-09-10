@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("#ck7").prop("checked",true);
+            });
+
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="选中/不选中" id="btn"/>
+<input type="checkbox" value="1" name="play"/>吃饭
+<input type="checkbox" value="2" name="play"/>睡觉
+<input type="checkbox" value="3" name="play"/>打豆豆
+<input type="checkbox" value="4" name="play"/>打篮球
+<input type="checkbox" value="5" name="play"/>打足球
+<input type="checkbox" value="6" name="play"/>打铅球
+<input type="checkbox" value="7" name="play" id="ck7"/>打小苏
+
+</body>
+</html>

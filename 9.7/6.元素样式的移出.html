@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.3.1.js"></script>
+    <style>
+        .cls{
+            width: 200px;
+            height: 100px;
+            background-color: crimson;
+        }
+        .cls2{
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="显示效果" id="btn">
+<div id="dv"></div>
+<script>
+    $(function () {
+        $("#btn").click(function () {
+            // $("#dv").addClass("cls cls2");
+
+            // $("#dv").removeClass("cls cls2");
+
+            //hasClass检查是否运用了类样式
+            if ($("#dv").hasClass("cls cls2")){
+                console.log("yes");
+            } else {
+                console.log("no");
+            }
+        });
+    });
+</script>
+</body>
+</html>
